@@ -14,7 +14,7 @@ ADD_EXECUTABLE(MAIN main) //自动寻找main、main.c和main.cpp等文件，不�
 //TODO：用法
 PROJECT(projectname[CXX][C][Java])
 //TODO:四个变量
-<projectname>_BINARY_DIR = PROJECT_BINARY_DIR //编译路径
+<projectname>_BINARY_DIR = PROJECT_BINARY_DIR //编译路径执行cmake的目录
 <projectname>_SOURCE_DIR = PROJECT_SOURCE_DIR //工程路径
 ```  
 ### SET指令---显式的定义变量
@@ -23,6 +23,9 @@ PROJECT(projectname[CXX][C][Java])
 SET(VAR [VALUE][CACHE TYPE DOCSTRING [FORCE]])
 //TODO:示例
 SET(SRC_LIST main.c a.c b.c c.c)
+//TODO:指定最终文件生成目录位置
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/output) //二进制可执行文件
+SET(LIBRARY_OUT_PATH ${PROJECT_SOURCE_DIR}/output) //lib库文件
 ```  
 ### MESSAGE指令---向终端输出信息  
 ```cmake
