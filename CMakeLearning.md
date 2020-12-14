@@ -37,11 +37,11 @@ MESSAGE([SNED_ERROR | STATUS | FATAL_ERROR] "message to display")
 //TODO:用法
 ADD_EXECUTABLE(HELLO ${SRC_LIST})
 ```
-### ADD_SUBDIRECTORY---添加源文件子目录，并制定中间二进制与目标二进制的存放位置
+### ADD_SUBDIRECTORY---添加源文件子目录，并指定中间二进制与目标二进制的存放位置
 ```cmake
 //TODO:用法
 ADD_SUBDIRECTORY(sourece_dir [binary_dir] [EXCLUDE_FROM_ALL]) //EXCLUDE_FROM_ALL 将这个目录剔除
 //TODO:示例
-ADD_SUBDIRECTORY(src bin) // 将src添加编译目录，制定二进制到bin
+ADD_SUBDIRECTORY(src bin) // 将src添加编译目录，指定二进制到bin
 ```
 
