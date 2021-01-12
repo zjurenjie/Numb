@@ -109,3 +109,19 @@ if (Character.isSupplementaryCodePoint(codePoint)) {
     i++;
 }
 ``` 
+*CharSequence*类型是一种接口类型，所有的字符串都属于此接口
+```java
+public final class String
+    implements java.io.Serializable, Comparable<String>, CharSequence{}
+```
+### 3.6.9 **构建字符串 StringBuilder**
+1.创建对象：`StringBuilder str = new StringBuilder()`  
+2.添加元素：`str.append()`  
+3.转成字符串：`str.toString()`
+## 3.7 输入输出
+### 3.7.1 **读取输入**
+构造一个`Scanner`对象并与标准输入流`System.in`相关联：  
+`Scanner in = new Scanner(System.in);`。  
+1.`nextInt()`如果输入的数据超出int范围则会报`InputMismatchException`异常。
+### 3.7.2 **格式化输出**
+1.使用`String.format()`方法返回一个给定格式的字符串。  
