@@ -8,7 +8,14 @@
 ADD_EXECUTABLE(MAIN "main.c")
 ADD_ECECUTABLE(MAIN "fu nc.c")
 ADD_EXECUTABLE(MAIN main) //自动寻找main、main.c和main.cpp等文件，不推荐
-
+### **要求CMAKE的版本号**
+```cmake
+CMAKE_MINIMUM_REQUIRED(VERSION versionNumber [FATAL_ERROR])
+```  
+*FATAL_ERROR*如果cmake的版本小于目标版本*versionNumber*，则出现严重错误，整个过程终止
+### **定义工程名称**
+```cmake
+PROJECT(projectName [CXX][C][Java])
 ### PROJECT指令---定义工程名称与类型
 ```cmake
 //TODO：用法
